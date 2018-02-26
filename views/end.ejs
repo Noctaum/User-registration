@@ -1,0 +1,22 @@
+<% include ./partials/header %>
+
+<div cass="container">
+	<h1> Ваша информация </h1>
+	
+	<a href="/">Назад</a>
+</div>
+<div cass="container">
+<ol>
+<% for(let i = 0; i < pdf.length; i++){ %>
+	<li>
+		<ul>
+		 <li><%= pdf[i].name %></li>
+		 <li><%= pdf[i].lastname %></li>
+		 <li><%= pdf[i].image %></li>
+		 <li><%= pdf[i].pdf %></li>
+		</ul>
+	</li>
+<% } %>
+</ol>
+</div>
+<% include ./partials/footer %>

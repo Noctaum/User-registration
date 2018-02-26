@@ -1,0 +1,13 @@
+<% include ./partials/header %>
+
+<div cass="container">
+	<h1> Стартовая страниц </h1>
+	<a href="/register">Регистрация</a>
+	<a href="/search">Поиск</a>
+</div>
+<% if(mes){  %>
+<div class="alert alert-info" role="alert">
+ 	<h4> <%= mes %> </h4>
+ </div>
+ <% } %>
+<% include ./partials/footer %>

@@ -1,0 +1,19 @@
+<% include ./partials/header %>
+
+<div cass="container">
+	<h1> Поиск </h1>
+	
+	<a href="/">Назад</a>
+</div>
+<div cass="container">
+	<form action="/search" method="POST">
+	    <div class="form-group">
+	    	<input class="form-control" type="text" name="username" placeholder="username">
+	    </div>
+	     <div class="form-group">
+	        <button class="btn btn-lg btn-primary btn-block">Найти</button>
+	    </div>
+	</form>
+</div>
+
+<% include ./partials/footer %>
