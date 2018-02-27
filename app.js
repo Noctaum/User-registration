@@ -16,6 +16,33 @@ var connection = mysql.createConnection({
   database: "mydb"
 });
 
+connection.connect(function(err) {
+  	if (err) console.log("ERROR!"+err);
+  	else{
+	  console.log("Connected!");
+	  connection.query("CREATE DATABASE mydb", function (err, result) {
+	    if (err) console.log("ERROR!"+err);
+  		else{
+	    	console.log("Database created");
+		}
+	  });
+	}
+});
+
+connection.connect(function(err) {
+  	if (err) console.log("ERROR!"+err);
+  	else{
+	  console.log("Connected!");
+	  var sql = "CREATE TABLE customers (name VARCHAR(255), lastname VARCHAR(255), image VARCHAR(255), pdf VARCHAR(255) )";
+	  connection.query(sql, function (err, result) {
+	    if (err) console.log("ERROR!"+err);
+  		else{
+	    	console.log("Table created");
+		}
+	  });
+	}
+});
+
 app.get("/", function(req, res){
 	 	var mes = 0;
         res.render("index", {mes:mes});
